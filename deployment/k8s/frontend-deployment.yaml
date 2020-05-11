@@ -13,7 +13,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: gr8h/udagram-frontend:local
+      - image: gr8h/udagram-frontend
         name: frontend
         imagePullPolicy: Always          
         ports:
