@@ -15,10 +15,19 @@ before_script:
 
 script:
   - docker --version # print the version for logging
+
+  - echo "Building udagram-reversproxy"
+  - cd udagram-reversproxy
+  - docker build -t udagram-reversproxy .
+  - docker tag udagram-reversproxy gr8h/udagram-reversproxy:latest
+
+  - echo "Building udagram-feed-api"
   - cd udagram-feed-api
   - docker build -t udagram-feed-api .
   - docker tag udagram-feed-api gr8h/udagram-feed-api:latest
+  
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push gr8h/udagram-reversproxy
   - docker push gr8h/udagram-feed-api
