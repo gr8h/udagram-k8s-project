@@ -1,0 +1,20 @@
+echo "Building udagram-reverseproxy"
+cd udagram-reverseproxy
+docker build -t udagram-reverseproxy .
+docker tag udagram-reverseproxy gr8h/udagram-reverseproxy:latest
+cd ..
+echo "Building udagram-feed-api"
+cd udagram-feed-api
+docker build -t udagram-feed-api .
+docker tag udagram-feed-api gr8h/udagram-feed-api:latest
+cd ..
+echo "Building udagram-user-api"
+cd udagram-user-api
+docker build -t udagram-user-api .
+docker tag udagram-user-api gr8h/udagram-user-api:latest
+cd ..
+echo "Building udagram-frontend"
+cd udagram-frontend
+docker build -t udagram-frontend .
+docker tag udagram-frontend gr8h/udagram-frontend:latest
+cd ..

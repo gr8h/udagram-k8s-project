@@ -1,7 +1,7 @@
 version: "3"
 services:
  reverseproxy:
-   image: gr8h/reverseproxy
+   image: gr8h/udagram-reverseproxy
    ports:
      - 8080:8080
    restart: always
