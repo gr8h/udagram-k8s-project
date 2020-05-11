@@ -1,0 +1,7 @@
+The public GitHub repo and the docker hub images:
+
+https://hub.docker.com/r/gr8h/udagram-frontend
+https://hub.docker.com/r/gr8h/udagram-user-api
+https://hub.docker.com/r/gr8h/udagram-feed-api
+https://hub.docker.com/r/gr8h/udagram-reverseproxy
+
