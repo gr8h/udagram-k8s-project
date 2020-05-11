@@ -11,7 +11,7 @@ module.exports = {
         type: Sequelize.STRING,
         primaryKey: true,
       },
-      passwordHash: {
+      passwordhash: {
         type: Sequelize.STRING,
       },
       createdAt: {
